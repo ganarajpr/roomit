@@ -37,6 +37,15 @@ a {
     float: left;
 }
 
+button.btn.btn-block.btn-facebook {
+    height: auto;
+    padding: 1px 10px;
+    font-size: 25px;
+    background-color: #FF4600;
+    border-radius: 5px;
+    baseline-shift: super;
+}
+
 .navbar-nav > li > a {
     padding: 15px;
 }
@@ -86,13 +95,19 @@ a {
     color : #aaa;
 }
 
-.input-group-btn:last-child>.btn {
-    background-color: #FF4600;
-    color: #ddd;
+/*.input-group-btn:last-child>.btn {
     border-radius: 5px;
     border: none;
     font-size : 25px;
-    padding : 0 0;
+    padding : 10px 5px;
+}*/
+
+.btn-facebook .ion-social-facebook{
+    font-size: 35px;
+    color: #fff;
+
+    background-color: #3b5998;
+    padding: 0px 15px;
 }
 
 .search-criteria .form-inline .has-feedback .form-control-feedback{
@@ -289,6 +304,8 @@ a {
     color: #fff;
     background-color: #3b5998;
     border: 1px solid #335190;
+    font-size: 30px;
+    box-sizing: content-box;
 }
 
 .btn-facebook:hover,

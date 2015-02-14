@@ -19,17 +19,20 @@
                 <div class="input-group input-group-lg margin-20">
                     <select name="lookingFor" id="lookingFor" class="form-control">
                         <option selected="selected">Look for Roommates</option>
-                        <option selected="selected">Look for Rooms</option>
+                        <option>Look for Rooms</option>
                     </select>
                 </div>
                 <div class="input-group input-group-lg has-feedback margin-20">
                     <input type="text" class="form-control" id="location" placeholder="Location" g-places-autocomplete
                            options="autocompleteOptions" ng-model="place">
-                    <i class="glyphicon glyphicon-globe form-control-feedback"></i>
+                    <i class="ion-location form-control-feedback"></i>
                 </div>
                 <div class="input-group input-group-lg">
                     <div class="input-group-btn">
-                        <button type="submit" class="btn btn-default ">Search</button>
+                        <!--<button type="submit" class="btn btn-default ">Search</button>-->
+                        <button class="btn btn-block btn-facebook" ng-click="authenticate('facebook')">
+                            Get Started&nbsp;&nbsp;&nbsp;<i class="ion-social-facebook"></i>
+                        </button>
                     </div>
                 </div>
             </form>

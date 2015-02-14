@@ -1,7 +1,7 @@
 module.exports = {
   TOKEN_SECRET: process.env.TOKEN_SECRET || 'A hard to guess string',
   MONGO_URI: process.env.MONGO_URI || 'localhost',
-  FACEBOOK_SECRET: process.env.FACEBOOK_SECRET || 'Facebook App Secret',
+  FACEBOOK_SECRET: process.env.FACEBOOK_SECRET || 'c1ed4eac1f09f8be8901810f1eeca11c',
   FOURSQUARE_SECRET: process.env.FOURSQUARE_SECRET || 'Foursquare Client Secret',
   GOOGLE_SECRET: process.env.GOOGLE_SECRET || 'vG5VH8COYQRFDAjFEIHLNuE7',
   GITHUB_SECRET: process.env.GITHUB_SECRET || 'GitHub Client Secret',
