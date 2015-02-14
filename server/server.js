@@ -78,6 +78,12 @@ if (app.get('env') === 'production') {
 }
 app.use(express.static(path.join(__dirname, '../client')));
 
+app.use('/js', express.static(__dirname + '../client/js'));
+app.use('/assets', express.static(__dirname + '../client/assets'));
+app.use('/css', express.static(__dirname + '../client/css'));
+app.use('/partials', express.static(__dirname + '../client/partials'));
+
+
 /*
  |--------------------------------------------------------------------------
  | Login Required Middleware
@@ -755,6 +761,12 @@ app.get('/auth/unlink/:provider', ensureAuthenticated, function (req, res) {
             res.status(200).end();
         });
     });
+});
+
+
+app.all('/*', function(req, res, next) {
+    // Just send the index.html for other files to support HTML5Mode
+    res.sendfile('index.html', { root: path.join(__dirname, '../client') });
 });
 
 /*

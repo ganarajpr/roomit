@@ -1,5 +1,5 @@
 angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStrap', 'satellizer', 'google.places'])
-    .config(function ($stateProvider, $urlRouterProvider, $authProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $authProvider,$locationProvider) {
         $stateProvider
             .state('home', {
                 url: '/',
@@ -90,4 +90,5 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStra
             redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host,
             authorizationEndpoint: 'https://foursquare.com/oauth2/authenticate'
         });
+        $locationProvider.html5Mode(true);
     });
