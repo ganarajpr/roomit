@@ -76,7 +76,7 @@ if (app.get('env') === 'production') {
         protocol == 'https' ? next() : res.redirect('https://' + req.hostname + req.url);
     });
 }
-app.use(express.static(path.join(__dirname, '../client')));
+//app.use(express.static(path.join(__dirname, '../client')));
 
 app.use('/js', express.static(__dirname + '../client/js'));
 app.use('/assets', express.static(__dirname + '../client/assets'));
@@ -764,10 +764,13 @@ app.get('/auth/unlink/:provider', ensureAuthenticated, function (req, res) {
 });
 
 
-app.all('/*', function(req, res, next) {
+/*app.all('*//*', function(req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
     res.sendfile('index.html', { root: path.join(__dirname, '../client') });
-});
+});*/
+
+app.use(express.static(path.join(__dirname, '../client')));
+
 
 /*
  |--------------------------------------------------------------------------

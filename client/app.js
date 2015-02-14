@@ -3,16 +3,16 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStra
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'partials/home.html',
+                templateUrl: '/partials/home.html',
                 controller: 'HomePageController',
                 resolve: {
                     authenticated: function ($q, $location, $auth) {
                         var deferred = $q.defer();
 
                         if (!$auth.isAuthenticated()) {
-                            $location.path('/profile');
-                        } else {
                             deferred.resolve();
+                        } else {
+                            $location.path('/onlogin');
                         }
 
                         return deferred.promise;
@@ -21,7 +21,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStra
             })
             .state('login', {
                 url: '/login',
-                templateUrl: 'partials/login.html',
+                templateUrl: '/partials/login.html',
                 controller: 'LoginCtrl'
             })
             .state('signup', {
@@ -34,9 +34,9 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStra
                 template: null,
                 controller: 'LogoutCtrl'
             })
-            .state('profile', {
-                url: '/profile',
-                templateUrl: 'partials/onlogin.html',
+            .state('onlogin', {
+                url: '/onlogin',
+                templateUrl: '/partials/onlogin.html',
                 controller: 'ProfileCtrl',
                 resolve: {
                     authenticated: function ($q, $location, $auth) {
