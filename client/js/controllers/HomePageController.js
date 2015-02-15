@@ -8,7 +8,7 @@ angular.module('MyApp')
         $scope.authenticate = function (provider) {
             $auth.authenticate(provider)
                 .then(function () {
-                    $location.path('/profile');
+                    $location.path('/onlogin');
                 })
                 .catch(function (response) {
                     $alert({

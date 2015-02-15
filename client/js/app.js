@@ -1,5 +1,6 @@
 angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStrap', 'satellizer', 'google.places'])
     .config(function ($stateProvider, $urlRouterProvider, $authProvider,$locationProvider) {
+        var startup = true;
         $stateProvider
             .state('home', {
                 url: '/',
@@ -7,14 +8,18 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStra
                 controller: 'HomePageController',
                 resolve: {
                     authenticated: function ($q, $location, $auth) {
-                        var deferred = $q.defer();
-
-                        if (!$auth.isAuthenticated()) {
-                            deferred.resolve();
-                        } else {
-                            $location.path('/onlogin');
+                        if( startup ){
+                            $auth.logout();
+                            startup = false;
                         }
 
+                        var deferred = $q.defer();
+                        if( $auth.isAuthenticated()){
+                            $location.path('/onlogin');
+                        }
+                        else{
+                            deferred.resolve();
+                        }
                         return deferred.promise;
                     }
                 }
@@ -26,7 +31,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStra
             })
             .state('signup', {
                 url: '/signup',
-                templateUrl: 'partials/signup.html',
+                templateUrl: '../partials/signup.html',
                 controller: 'SignupCtrl'
             })
             .state('logout', {
@@ -90,5 +95,5 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStra
             redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host,
             authorizationEndpoint: 'https://foursquare.com/oauth2/authenticate'
         });
-        $locationProvider.html5Mode(true);
+        //$locationProvider.html5Mode(true);
     });
