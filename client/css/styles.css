@@ -38,12 +38,14 @@ a {
 }
 
 button.btn.btn-block.btn-facebook {
-    height: auto;
     padding: 1px 10px;
     font-size: 25px;
     background-color: #FF4600;
     border-radius: 5px;
-    baseline-shift: super;
+    /* baseline-shift: super; */
+    border: solid 1px;
+    height: 46px;
+    box-sizing: border-box;
 }
 
 .navbar-nav > li > a {
@@ -110,8 +112,9 @@ button.btn.btn-block.btn-facebook {
     padding: 0px 15px;
 }
 
-.search-criteria .form-inline .has-feedback .form-control-feedback{
-    top : 6px;
+.search-criteria .form-control-feedback{
+    top: 0px;
+    right: 10px;
 }
 
 
@@ -447,5 +450,16 @@ button.btn.btn-block.btn-facebook {
 
     50% {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    body{
+        /* background-repeat: inherit; */
+    
+        /* background-position: initial; */
+        /* background-clip: padding-box; */
+        /* background-origin: padding-box; */
+        background-size: inherit;
     }
 }
