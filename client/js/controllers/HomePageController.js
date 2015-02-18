@@ -1,6 +1,8 @@
 angular.module('MyApp')
     .controller('HomePageController', function ($scope, $alert, $auth,$location) {
         $scope.place = null;
+
+        $scope.hasBackground = true;
         $scope.autocompleteOptions = {
             componentRestrictions: {country: 'uk'},
             types: ['geocode']

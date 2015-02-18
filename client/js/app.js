@@ -42,7 +42,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStra
             .state('onlogin', {
                 url: '/onlogin',
                 templateUrl: '/partials/onlogin.html',
-                controller: 'ProfileCtrl',
+                controller: 'HomePageController',
                 resolve: {
                     authenticated: function ($q, $location, $auth) {
                         var deferred = $q.defer();
