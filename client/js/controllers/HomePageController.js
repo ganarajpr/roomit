@@ -1,7 +1,6 @@
 angular.module('MyApp')
-    .controller('HomePageController', function ($scope, $auth,$location,$window) {
+    .controller('HomePageController', function ($scope, $auth,$location,$timeout,$window) {
         $scope.place = null;
-
         $scope.hasBackground = true;
         $scope.autocompleteOptions = {
             componentRestrictions: {country: 'uk'},
@@ -14,16 +13,10 @@ angular.module('MyApp')
         $scope.authenticate = function (provider) {
             $auth.authenticate(provider)
                 .then(function () {
-                    //$location.path('/onlogin');
-                    $window.location.href = 'profile.html';
+                    $location.path('/onlogin');
                 })
                 .catch(function (response) {
-                    /*$alert({
-                        content: response.data ? response.data.message : response,
-                        animation: 'fadeZoomFadeDown',
-                        type: 'material',
-                        duration: 3
-                    });*/
+
                 });
         };
     });

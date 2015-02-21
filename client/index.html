@@ -21,7 +21,7 @@
     <base href="/"></base>
 </head>
 <body class="notransition">
-<div class="container-fluid fullHeight fadeZoom home-page"  ng-class="{'home-page' : hasBackground}">
+<div class="container-fluid fullHeight fadeZoom" ui-view=""  ng-class="{'home-page' : hasBackground}">
     <div class="fullHeight container-fluid">
         <div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top">
             <div class="navbar-header">
@@ -110,9 +110,10 @@
 <!--
 <script src="js/controllers/signup.js"></script>
 <script src="js/controllers/logout.js"></script>
-<script src="js/controllers/profile.js"></script>
+
 -->
+<script src="js/controllers/profile.js"></script>
 <script src="js/controllers/navbar.js"></script>
-<!--<script src="js/services/account.js"></script>-->
+<script src="js/services/account.js"></script>
 </body>
 </html>

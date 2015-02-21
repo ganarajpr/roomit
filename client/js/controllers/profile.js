@@ -1,5 +1,5 @@
 angular.module('MyApp')
-  .controller('ProfileCtrl', function($scope, $auth, $alert, Account) {
+  .controller('ProfileCtrl', function($scope, $auth, Account) {
 
     /**
      * Get user's profile information.
@@ -10,12 +10,12 @@ angular.module('MyApp')
           $scope.user = data;
         })
         .error(function(error) {
-          $alert({
+          /*$alert({
             content: error.message,
             animation: 'fadeZoomFadeDown',
             type: 'material',
             duration: 3
-          });
+          });*/
         });
     };
 
@@ -28,12 +28,12 @@ angular.module('MyApp')
         displayName: $scope.user.displayName,
         email: $scope.user.email
       }).then(function() {
-        $alert({
+        /*$alert({
           content: 'Profile has been updated',
           animation: 'fadeZoomFadeDown',
           type: 'material',
           duration: 3
-        });
+        });*/
       });
     };
 
@@ -54,12 +54,12 @@ angular.module('MyApp')
           $scope.getProfile();
         })
         .catch(function(response) {
-          $alert({
+          /*$alert({
             content: response.data.message,
             animation: 'fadeZoomFadeDown',
             type: 'material',
             duration: 3
-          });
+          });*/
         });
     };
 
@@ -69,23 +69,23 @@ angular.module('MyApp')
     $scope.unlink = function(provider) {
       $auth.unlink(provider)
         .then(function() {
-          $alert({
+          /*$alert({
             content: 'You have successfully unlinked ' + provider + ' account',
             animation: 'fadeZoomFadeDown',
             type: 'material',
             duration: 3
-          });
+          });*/
         })
         .then(function() {
           $scope.getProfile();
         })
         .catch(function(response) {
-          $alert({
+          /*$alert({
             content: response.data ? response.data.message : 'Could not unlink ' + provider + ' account',
             animation: 'fadeZoomFadeDown',
             type: 'material',
             duration: 3
-          });
+          });*/
         });
     };
 

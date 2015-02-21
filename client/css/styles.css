@@ -156,5 +156,12 @@ button.btn.btn-block.btn-facebook {
     top: 19px;
 }
 
+#content.fullHeight{
+    height: 100%;
+    padding-bottom: 100px;
+}
 
-
+#leftSide.fullHeight {
+    height: 94%;
+    height: calc(100% - 60px);
+}

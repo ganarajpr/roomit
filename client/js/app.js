@@ -41,8 +41,8 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'ui.bootstrap'
             })
             .state('onlogin', {
                 url: '/onlogin',
-                templateUrl: '/partials/onlogin.html',
-                controller: 'HomePageController',
+                templateUrl: '/partials/profile.html',
+                controller: 'ProfileCtrl',
                 resolve: {
                     authenticated: function ($q, $location, $auth) {
                         var deferred = $q.defer();
