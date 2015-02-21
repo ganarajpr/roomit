@@ -1,4 +1,4 @@
-angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'mgcrea.ngStrap', 'satellizer', 'google.places'])
+angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'ui.bootstrap', 'satellizer', 'google.places'])
     .config(function ($stateProvider, $urlRouterProvider, $authProvider,$locationProvider) {
         var startup = true;
         $stateProvider
