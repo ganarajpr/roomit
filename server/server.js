@@ -27,13 +27,24 @@ var userSchema = new mongoose.Schema({
     displayName: String,
     gender: String,
     facebook: String,
-    foursquare: String,
-    google: String,
-    github: String,
-    linkedin: String,
-    live: String,
-    yahoo: String,
-    twitter: String
+    ageGroup: String,
+    flatMateAgeGroup: String,
+    flatMateGender: String,
+    occupation: String,
+    flatMateOccupation: String,
+    locationPreference: String,
+    smoker: String,
+    flatMateSmoker: String,
+    hasPets: String,
+    flatMateHasPets: String,
+    diet: String,
+    flatMateDiet: String,
+    cleanliness: String,
+    flatMateCleanliness: String,
+    social: String,
+    flatMateSocial: String,
+    ethnicity: String,
+    flatMateEthnicity: String
 });
 
 userSchema.pre('save', function (next) {
@@ -139,6 +150,36 @@ app.put('/api/me', ensureAuthenticated, function (req, res) {
         }
         user.displayName = req.body.displayName || user.displayName;
         user.email = req.body.email || user.email;
+
+        user.gender = req.body.gender || user.gender;
+        user.flatMateGender = req.body.flatMateGender || 'No Preference';
+
+        user.ageGroup = req.body.ageGroup ;
+        user.flatMateAgeGroup = req.body.flatMateAgeGroup || 'No Preference';
+
+        user.occupation = req.body.occupation;
+        user.flatMateOccupation = req.body.flatMateOccupation || 'No Preference';
+
+        user.locationPreference = req.body.locationPreference || 'No Preference';
+
+        user.smoker = req.body.smoker;
+        user.flatMateSmoker = req.body.flatMateSmoker || 'No Preference';
+
+        user.hasPets = req.body.hasPets;
+        user.flatMateHasPets = req.body.flatMateHasPets || 'No Preference';
+
+        user.diet = req.body.diet;
+        user.flatMateDiet = req.body.flatMateDiet || 'No Preference';
+
+        user.cleanliness = req.body.cleanliness;
+        user.flatMateCleanliness = req.body.flatMateCleanliness || 'No Preference';
+
+        user.social = req.body.social;
+        user.flatMateSocial = req.body.flatMateSocial || 'No Preference';
+
+        user.ethnicity = req.body.ethnicity;
+        user.flatMateEthnicity = req.body.flatMateEthnicity || 'No Preference';
+
         user.save(function (err) {
             res.status(200).end();
         });

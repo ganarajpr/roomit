@@ -39,8 +39,26 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'ui.bootstrap'
                 template: null,
                 controller: 'LogoutCtrl'
             })
-            .state('onlogin', {
-                url: '/onlogin',
+            .state('thankyou', {
+                url: '/thankyou',
+                templateUrl: '/partials/onlogin.html',
+                controller: 'HomePageController',
+                resolve: {
+                    authenticated: function ($q, $location, $auth) {
+                        var deferred = $q.defer();
+
+                        if (!$auth.isAuthenticated()) {
+                            $location.path('/');
+                        } else {
+                            deferred.resolve();
+                        }
+
+                        return deferred.promise;
+                    }
+                }
+            })
+            .state('profile', {
+                url: '/profile',
                 templateUrl: '/partials/profile.html',
                 controller: 'ProfileCtrl',
                 resolve: {

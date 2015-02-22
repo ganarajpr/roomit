@@ -1,18 +1,13 @@
-<div class="container-fluid fullHeight">
+<div class="container-fluid fullHeight profile-page">
     <!-- Header -->
 
     <div id="header">
         <div class="logo">
-            <a href="index.html">
+            <a href="" ui-sref="home">
                 <span class="fa fa-home marker"></span>
                 <span class="logoText">Roomit</span>
             </a>
         </div>
-        <!--<a href="#" class="navHandler"><span class="fa fa-bars"></span></a>-->
-        <!--<div class="search">
-            <span class="searchIcon icon-magnifier"></span>
-            <input type="text" placeholder="Search for houses, apartments...">
-        </div>-->
         <div class="headerUserWraper" dropdown>
             <a href="#" class="userHandler dropdown-toggle" dropdown-toggle><span class="icon-user"></span><span class="counter">5</span></a>
             <a href="#" class="headerUser dropdown-toggle" dropdown-toggle>
@@ -36,140 +31,11 @@
                 </ul>
             </div>
         </div>
-        <div class="headerNotifyWraper">
-            <a href="#" class="headerNotify">
-                <span class="notifyIcon icon-bell"></span>
-                <span class="counter">5</span>
-            </a>
-            <div class="dropdown-menu pull-right notifyMenu" role="menu">
-                <div class="notifyHeader">
-                    <span>Notifications</span>
-                    <a href="#" class="notifySettings icon-settings"></a>
-                    <div class="clearfix"></div>
-                </div>
-                <ul class="notifyList">
-                    <li>
-                        <a href="#">
-                            <img class="avatar pull-left" ng-src="{{'https://graph.facebook.com/'+user.facebook+'/picture'}}" alt="avatar">
-                            <div class="pulse border-grey"></div>
-                            <div class="notify pull-left">
-                                <div class="notifyName">Sed ut perspiciatis unde</div>
-                                <div class="notifyTime">5 minutes ago</div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="notifyRound notifyRound-red fa fa-envelope-o"></div>
-                            <div class="pulse border-red"></div>
-                            <div class="notify pull-left">
-                                <div class="notifyName">Lorem Ipsum is simply dummy text</div>
-                                <div class="notifyTime">20 minutes ago</div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="notifyRound notifyRound-yellow fa fa-heart-o"></div>
-                            <div class="pulse border-yellow"></div>
-                            <div class="notify pull-left">
-                                <div class="notifyName">It is a long established fact</div>
-                                <div class="notifyTime">2 hours ago</div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="notifyRound notifyRound-magenta fa fa-paper-plane-o"></div>
-                            <div class="pulse border-magenta"></div>
-                            <div class="notify pull-left">
-                                <div class="notifyName">There are many variations</div>
-                                <div class="notifyTime">1 day ago</div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </a>
-                    </li>
-                </ul>
-                <a href="#" class="notifyAll">See All</a>
-            </div>
-        </div>
-        <a href="#" class="mapHandler"><span class="icon-map"></span></a>
+
         <div class="clearfix"></div>
     </div>
 
-    <!-- Left Side Navigation -->
 
-    <!--<div id="leftSide" class="fullHeight">
-        <nav class="leftNav scrollable">
-            <div class="search">
-                <span class="searchIcon icon-magnifier"></span>
-                <input type="text" placeholder="Search for houses, apartments...">
-                <div class="clearfix"></div>
-            </div>
-            <ul>
-                <li><a href="explore.html"><span class="navIcon icon-compass"></span><span class="navLabel">Explore</span></a></li>
-                <li><a href="single.html"><span class="navIcon icon-home"></span><span class="navLabel">Single</span></a></li>
-                <li><a href="add.html"><span class="navIcon icon-plus"></span><span class="navLabel">New</span></a></li>
-                <li class="hasSub">
-                    <a href="#"><span class="navIcon icon-drop"></span><span class="navLabel">Colors</span><span class="fa fa-angle-left arrowRight"></span><span class="badge bg-yellow">5</span></a>
-                    <ul class="colors">
-                        <li><a href="#">Red <span class="fa fa-circle-o c-red icon-right"></span></a></li>
-                        <li><a href="#">Green <span class="fa fa-circle-o c-green icon-right"></span></a></li>
-                        <li><a href="#">Blue <span class="fa fa-circle-o c-blue icon-right"></span></a></li>
-                        <li><a href="#">Yellow <span class="fa fa-circle-o c-yellow icon-right"></span></a></li>
-                        <li><a href="#">Magenta <span class="fa fa-circle-o c-magenta icon-right"></span></a></li>
-                    </ul>
-                </li>
-                <li class="hasSub">
-                    <a href="#"><span class="navIcon icon-layers"></span><span class="navLabel">Elements</span><span class="fa fa-angle-left arrowRight"></span></a>
-                    <ul>
-                        <li><a href="buttons.html">Buttons</a></li>
-                        <li><a href="icons.html">Icons <span class="badge pull-right bg-yellow">841</span></a></li>
-                        <li><a href="grid.html">Grid</a></li>
-                        <li><a href="widgets.html">Widgets</a></li>
-                        <li><a href="components.html">Components</a></li>
-                        <li><a href="lists.html">Lists</a></li>
-                        <li><a href="tables.html">Tables</a></li>
-                        <li><a href="form.html">Form</a></li>
-                    </ul>
-                </li>
-                <li class="hasSub">
-                    <a href="#"><span class="navIcon icon-link"></span><span class="navLabel">Pages</span><span class="fa fa-angle-left arrowRight"></span></a>
-                    <ul>
-                        <li><a href="signin.html">Sign In</a></li>
-                        <li><a href="signup.html">Sign Up</a></li>
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="index.html">Homepage Slideshow</a></li>
-                        <li><a href="index-map.html">Homepage Map</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-post.html">Blog Post</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div class="leftUserWraper dropup" dropdown>
-            <a href="#" class="avatarAction" dropdown-toggle>
-                <img class="avatar" ng-src="{{'https://graph.facebook.com/'+user.facebook+'/picture'}}" alt="avatar"><span class="counter">5</span>
-                <div class="userBottom pull-left">
-                    <span class="bottomUserName">{{user.displayName}}</span> <span class="fa fa-angle-up pull-right arrowUp"></span>
-                </div>
-                <div class="clearfix"></div>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#"><span class="icon-settings"></span>Settings</a></li>
-                <li><a href="profile.html"><span class="icon-user"></span>Profile</a></li>
-                <li><a href="#"><span class="icon-bell"></span>Notifications <span class="badge pull-right bg-red">5</span></a></li>
-                <li class="divider"></li>
-                <li><a href="#"><span class="icon-power"></span>Logout</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="closeLeftSide"></div>
--->
-    <!-- Content -->
 
     <div id="wrapper" class="full fullHeight">
         <div id="content" class="max fullHeight">
@@ -177,262 +43,301 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h2>Your Details</h2></div>
+                            <div class="panel-heading green"><h2>Your Details</h2></div>
                             <div class="panel-body">
                                 <form class="form-horizontal" role="form">
                                     <div class="form-group">
-                                        <label class="col-sm-2 control-label">Readonly</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly">
+                                        <label class="col-sm-3 control-label">Name</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" ng-model="user.displayName" class="form-control" placeholder="Readonly input" readonly="readonly">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-2 control-label">Rounded corners</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control round">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Static control</label>
-                                        <div class="col-sm-10">
-                                            <p class="form-control-static">Static control value here</p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Textarea</label>
-                                        <div class="col-sm-10">
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group has-success">
-                                        <label class="col-sm-2 control-label">Input with success</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group has-warning">
-                                        <label class="col-sm-2 control-label">Input with warning</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group has-error">
-                                        <label class="col-sm-2 control-label">Input with error</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control">
-                                            <p class="help-block">This field is required</p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group has-success has-feedback">
-                                        <label class="col-sm-2 control-label">Input with success and feedback</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control">
-                                            <span class="fa fa-check-circle form-control-feedback"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group has-warning has-feedback">
-                                        <label class="col-sm-2 control-label">Input with warning and feedback</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control">
-                                            <span class="fa fa-exclamation-circle form-control-feedback"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group has-error has-feedback">
-                                        <label class="col-sm-2 control-label">Input with error and feedback</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control">
-                                            <p class="help-block">This field is required</p>
-                                            <span class="fa fa-times-circle form-control-feedback"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Input group addon left</label>
-                                        <div class="col-sm-10">
-                                            <div class="input-group">
-                                                <div class="input-group-addon">@</div>
-                                                <input class="form-control" type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Input group addon right</label>
-                                        <div class="col-sm-10">
-                                            <div class="input-group">
-                                                <input class="form-control round" type="text">
-                                                <div class="input-group-addon round">.00</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Input group button left</label>
-                                        <div class="col-sm-10">
-                                            <div class="input-group">
-                                                    <span class="input-group-btn">
-                                                        <a href="#" class="btn btn-green">Go!</a>
-                                                    </span>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Input group button right</label>
-                                        <div class="col-sm-10">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control">
-                                                    <span class="input-group-btn">
-                                                        <a href="#" class="btn btn-green">Go!</a>
-                                                    </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Input group dropdown left</label>
-                                        <div class="col-sm-10">
-                                            <div class="input-group">
-                                                <div class="input-group-btn">
-                                                    <a href="#" class="btn btn-green dropdown-toggle" data-toggle="dropdown">
-                                                        Action <span class="caret"></span>
-                                                    </a>
-                                                    <ul class="dropdown-menu" role="menu">
-                                                        <li><a href="#">Action</a></li>
-                                                        <li><a href="#">Another action</a></li>
-                                                        <li><a href="#">Something else here</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Separated link</a></li>
-                                                    </ul>
-                                                </div>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Input group dropdown right</label>
-                                        <div class="col-sm-10">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control">
-                                                <div class="input-group-btn">
-                                                    <a href="#" class="btn btn-green dropdown-toggle" data-toggle="dropdown">
-                                                        Action <span class="caret"></span>
-                                                    </a>
-                                                    <ul class="dropdown-menu pull-right" role="menu">
-                                                        <li><a href="#">Action</a></li>
-                                                        <li><a href="#">Another action</a></li>
-                                                        <li><a href="#">Something else here</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Separated link</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Custom checkbox</label>
-                                        <div class="col-sm-10">
-                                            <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Unchecked</label></div>
-                                            <div class="checkbox custom-checkbox"><label><input type="checkbox" checked="checked"><span class="fa fa-check"></span> Checked</label></div>
-                                            <div class="checkbox custom-checkbox"><label><input type="checkbox" disabled="disabled"><span class="fa fa-check"></span> Unchecked disabled</label></div>
-                                            <div class="checkbox custom-checkbox"><label><input type="checkbox" checked="checked" disabled="disabled"><span class="fa fa-check"></span> Checked disabled</label></div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Custom radio</label>
-                                        <div class="col-sm-10">
-                                            <div class="radio custom-radio"><label><input type="radio" name="radio1"><span class="fa fa-circle"></span> Unchecked</label></div>
-                                            <div class="radio custom-radio"><label><input type="radio" name="radio1" checked="checked"><span class="fa fa-circle"></span> Checked</label></div>
-                                            <div class="radio custom-radio"><label><input type="radio" disabled="disabled"><span class="fa fa-circle"></span> Unchecked disabled</label></div>
-                                            <div class="radio custom-radio"><label><input type="radio" checked="checked" disabled="disabled"><span class="fa fa-circle"></span> Checked disabled</label></div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Control sizing</label>
-                                        <div class="col-sm-10">
-                                            <input class="form-control input-lg" type="text" placeholder=".input-lg">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">&nbsp;</label>
-                                        <div class="col-sm-10">
-                                            <input class="form-control" type="text" placeholder="Default input">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">&nbsp;</label>
-                                        <div class="col-sm-10">
-                                            <input class="form-control input-sm" type="text" placeholder=".input-sm">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Slider</label>
-                                        <div class="col-sm-3">
-                                            <div class="slider" id="slider1"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">&nbsp;</label>
-                                        <div class="col-sm-3">
-                                            <div class="slider" id="slider2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Range slider</label>
-                                        <div class="col-sm-3">
-                                            <div class="slider" id="slider3"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Dropdown select</label>
-                                        <div class="col-sm-10">
-                                            <div class="btn-group">
-                                                <button data-toggle="dropdown" class="btn btn-o btn-gray dropdown-toggle">
-                                                    <span class="dropdown-label">Option 1</span> <span class="caret"></span>
+                                        <label class="col-sm-3 control-label">Age Group</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.ageGroup}}</span><span class="caret"></span>
                                                 </button>
-                                                <ul class="dropdown-menu dropdown-select">
-                                                    <li class="active"><input type="radio" name="ds1" checked="checked"><a href="#">Option 1</a></li>
-                                                    <li><input type="radio" name="ds1"><a href="#">Option 2</a></li>
-                                                    <li><input type="radio" name="ds1"><a href="#">Option 3</a></li>
-                                                    <li class="disabled"><input type="radio" name="ds1" disabled=""><a href="#">Option disabled</a></li>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in ageOptions"><a href="#" ng-click="onAgeSelect(option)">{{option}}</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-2 control-label">Datepicker</label>
-                                        <div class="col-sm-3">
-                                            <input type="text" class="form-control" id="datepicker">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Autocomplete input</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" id="autocomplete" placeholder="Enter a programming language...">
-                                            <p class="help-block">The suggestions are tags for programming languages, give "ja" (for Java or JavaScript) a try.</p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Switch</label>
-                                        <div class="col-sm-10">
-                                            <div class="checkbox switch">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="cs-place"><span class="fa fa-check cs-handler"></span></span>
-                                                </label>
+                                        <label class="col-sm-3 control-label">Gender</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle disabled="'true'">
+                                                    <span class="dropdown-selected-text">{{user.gender}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <!--<li ng-repeat="option in ageOptions"><a href="#" ng-click="onAgeSelect(option)">{{option}}</a></li>-->
+                                                </ul>
                                             </div>
-                                            <div class="checkbox switch"><label><input type="checkbox" checked="checked"><span class="cs-place"><span class="fa fa-check cs-handler"></span></span></label></div>
-                                            <div class="checkbox switch"><label><input type="checkbox" disabled="disabled"><span class="cs-place"><span class="fa fa-check cs-handler"></span></span></label></div>
-                                            <div class="checkbox switch"><label><input type="checkbox" checked="checked" disabled="disabled"><span class="cs-place"><span class="fa fa-check cs-handler"></span></span></label></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-2 control-label">Tags input</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="tags" placeholder="Add a tag">
+                                        <label class="col-sm-3 control-label">Occupation</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.occupation}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in occupationOptions"><a href="#" ng-click="onOccupationSelect(option)">{{option}}</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-2 control-label">File upload</label>
+                                        <label class="col-sm-3 control-label">Preferred Location</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.locationPreference}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in locationPreferenceOptions"><a href="#" ng-click="onPrefLocSelect(option)">{{option}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Do you smoke ? </label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.smoker}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in yesNoOptions"><a href="#" ng-click="onSmokePref(option)">{{option}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Do you have pets ? </label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.hasPets}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in yesNoOptions"><a href="#" ng-click="onPetsPref(option)">{{option}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Diet</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.diet}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in dietOptions"><a href="#" ng-click="onDietSelect(option)">{{option}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Cleanliness</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.cleanliness}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in cleanOptions"><a href="#" ng-click="onCleanSelect(option)">{{option}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Socialising</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.social}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in socialOptions"><a href="#" ng-click="onSocialSelect(option)">{{option}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Ethnicity</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.ethnicity}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in ethnicityOptions"><a href="#" ng-click="onEthnicitySelect(option)">{{option}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading green"><h2>Your Ideal Flatmates Details</h2></div>
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Age Group</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.flatMateAgeGroup}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in ageOptions"><a href="#" ng-click="onFlatMateAgeSelect(option)">{{option}}</a></li>
+                                                    <li><a href="#" ng-click="onFlatMateAgeSelect('No Preference')">No Preference</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Gender</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.flatMateGender}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in genderOptions"><a href="#" ng-click="onFlatMateGenderSelect(option)">{{option}}</a></li>
+                                                    <li><a href="#" ng-click="onFlatMateGenderSelect('No Preference')">No Preference</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Occupation</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.flatMateOccupation}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in occupationOptions"><a href="#" ng-click="onFlatMateOccupationSelect(option)">{{option}}</a></li>
+                                                    <li><a href="#" ng-click="onFlatMateOccupationSelect('No Preference')">No Preference</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Smoker ?</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.flatMateSmoker}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in yesNoOptions"><a href="#" ng-click="onFlatMateSmokePref(option)">{{option}}</a></li>
+                                                    <li><a href="#" ng-click="onFlatMateSmokePref('No Preference')">No Preference</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Pets ? </label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.flatMateHasPets}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in yesNoOptions"><a href="#" ng-click="onFlatMatePetsPref(option)">{{option}}</a></li>
+                                                    <li><a href="#" ng-click="onFlatMatePetsPref('No Preference')">No Preference</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Diet</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.flatMateDiet}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in dietOptions"><a href="#" ng-click="onFlatMateDietSelect(option)">{{option}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Cleanliness</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.flatMateCleanliness}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in cleanOptions"><a href="#" ng-click="onFlatMateCleanSelect(option)">{{option}}</a></li>
+                                                    <li><a href="#" ng-click="onFlatMateCleanSelect('No Preference')">No Preference</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Socialising</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.flatMateSocial}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in socialOptions"><a href="#" ng-click="onFlatMateSocialSelect(option)">{{option}}</a></li>
+                                                    <li><a href="#" ng-click="onFlatMateSocialSelect('No Preference')">No Preference</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Ethnicity</label>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" dropdown>
+                                                <button type="button" class="btn btn-o btn-gray dropdown-toggle" dropdown-toggle>
+                                                    <span class="dropdown-selected-text">{{user.flatMateEthnicity}}</span><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li ng-repeat="option in ethnicityOptions"><a href="#" ng-click="onFlatMateEthnicitySelect(option)">{{option}}</a></li>
+                                                    <li><a href="#" ng-click="onFlatMateEthnicitySelect('No Preference')">No Preference</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
                                         <div class="col-sm-10">
-                                            <input type="file" class="file" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-o btn-default" data-browse-label="Browse Images">
-                                            <p class="help-block">You can select multiple images at once</p>
+                                            <div class="btn-group col-sm-3">
+                                                <button type="button" class="btn btn-green btn-block" ng-click="updateProfile()">
+                                                    Save
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>

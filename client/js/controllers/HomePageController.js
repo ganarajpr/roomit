@@ -1,5 +1,5 @@
 angular.module('MyApp')
-    .controller('HomePageController', function ($scope, $auth,$location,$timeout,$window) {
+    .controller('HomePageController', function ($scope, $auth,$state,$timeout,$window) {
         $scope.place = null;
         $scope.hasBackground = true;
         $scope.autocompleteOptions = {
@@ -13,7 +13,7 @@ angular.module('MyApp')
         $scope.authenticate = function (provider) {
             $auth.authenticate(provider)
                 .then(function () {
-                    $location.path('/onlogin');
+                    $state.transitionTo('profile');
                 })
                 .catch(function (response) {
 
