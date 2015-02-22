@@ -89,6 +89,12 @@ angular.module('MyApp')
 
         $scope.getProfile();
 
+        $scope.onLogout = function () {
+            $auth.logout().then(function(){
+                $state.transitionTo('home');
+            });
+        };
+
         $scope.ageOptions = [
             '18-28',
             '29-39',
