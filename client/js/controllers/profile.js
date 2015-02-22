@@ -8,6 +8,35 @@ angular.module('MyApp')
             Account.getProfile()
                 .success(function (data) {
                     $scope.user = data;
+                    $scope.user.ageGroup = $scope.user.ageGroup || $scope.ageOptions[0];
+                    $scope.user.flatMateAgeGroup = $scope.user.flatMateAgeGroup || 'No Preference';
+
+                    $scope.user.gender = $scope.user.gender || $scope.genderOptions[0];
+                    $scope.user.flatMateGender = $scope.user.flatMateGender || 'No Preference';
+
+                    $scope.user.occupation = $scope.user.occupation || $scope.occupationOptions[0];
+                    $scope.user.occupation = $scope.user.occupation || $scope.occupationOptions[0];
+                    $scope.user.flatMateOccupation = $scope.user.flatMateOccupation || 'No Preference';
+
+                    $scope.user.locationPreference = $scope.user.locationPreference || $scope.locationPreferenceOptions[0];
+
+                    $scope.user.smoker = $scope.user.smoker || $scope.yesNoOptions[0];
+                    $scope.user.flatMateSmoker = $scope.user.flatMateSmoker || 'No Preference';
+
+                    $scope.user.diet = $scope.user.diet || $scope.dietOptions[0];
+                    $scope.user.flatMateDiet = $scope.user.flatMateDiet || 'No Preference';
+
+                    $scope.user.hasPets = $scope.user.hasPets || $scope.yesNoOptions[0];
+                    $scope.user.flatMateHasPets = $scope.user.flatMateHasPets || 'No Preference';
+
+                    $scope.user.cleanliness = $scope.user.cleanliness || $scope.cleanOptions[0];
+                    $scope.user.flatMateCleanliness = $scope.user.flatMateCleanliness || 'No Preference';
+
+                    $scope.user.social = $scope.user.social || $scope.socialOptions[0];
+                    $scope.user.flatMateSocial = $scope.user.flatMateSocial || 'No Preference';
+
+                    $scope.user.ethnicity = $scope.user.ethnicity || $scope.ethnicityOptions[0];
+                    $scope.user.flatMateEthnicity = $scope.user.flatMateEthnicity || 'No Preference';
                 })
                 .error(function (error) {
                     /*$alert({
@@ -25,12 +54,6 @@ angular.module('MyApp')
          */
         $scope.updateProfile = function () {
             Account.updateProfile($scope.user).then(function () {
-                /*$alert({
-                 content: 'Profile has been updated',
-                 animation: 'fadeZoomFadeDown',
-                 type: 'material',
-                 duration: 3
-                 });*/
                 $state.transitionTo('thankyou');
             });
         };
@@ -115,6 +138,10 @@ angular.module('MyApp')
             'Other'
         ];
 
+        $scope.onGenderSelect = function(option){
+            $scope.user.gender = option;
+        };
+
         $scope.onFlatMateGenderSelect = function(option){
             $scope.user.flatMateGender = option;
         };
@@ -161,7 +188,7 @@ angular.module('MyApp')
         };
 
         $scope.dietOptions = [
-            'Anything',
+            'No Preference',
             'Vegetarian',
             'Vegan'
 
@@ -206,8 +233,7 @@ angular.module('MyApp')
             'Asial or Asian British : Pakistani',
             'Asial or Asian British : Bangladeshi',
             'Asial or Asian British : Other',
-            'Black or Black British',
-            'Dont want to disclose'
+            'Black or Black British'
         ];
         $scope.onEthnicitySelect = function(option){
             $scope.user.ethnicity = option;

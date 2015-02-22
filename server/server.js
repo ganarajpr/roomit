@@ -569,6 +569,8 @@ app.post('/auth/facebook', function (req, res) {
                     var user = new User();
                     user.facebook = profile.id;
                     user.displayName = profile.name;
+                    user.email = profile.email;
+                    user.gender = profile.gender;
                     user.save(function () {
                         var token = createToken(user);
                         res.send({token: token});
