@@ -22,7 +22,7 @@
         </div>
         <div class="text-center row search-criteria" ng-controller="HomePageController">
             <form>
-                <div class="form-group form-group-lg form-btn-group col-sm-3 col-sm-offset-1" dropdown>
+                <!--<div class="form-group form-group-lg form-btn-group col-sm-3 col-sm-offset-1" dropdown>
                     <a href="#" class="btn btn-block btn-white dropdown-toggle btn-lg col-sm-12" dropdown-toggle>
                         <span class="dropdown-label">Look for Roommates</span> <span class="caret"></span>
                     </a>
@@ -40,6 +40,33 @@
                     <button class="btn btn-block btn-lg btn-facebook col-sm-3" ng-click="authenticate('facebook')">
                         Get Started
                     </button>
+                </div>-->
+                <div class="row">
+                    <div class="form-group form-group-lg col-xs-6 col-xs-offset-3" >
+                        <div class="form-group row">
+                            <div class="col-xs-6">
+                                <div class="radio custom-radio"><label><input type="radio" name="room"><span class="fa fa-circle"></span> I have a room</label></div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="radio custom-radio"><label><input type="radio" name="room"><span class="fa fa-circle"></span> I need a room</label></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="form-group form-group-lg col-xs-3 col-xs-offset-2" >
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <div class="radio custom-radio"><label><input type="radio"><span class="fa fa-circle"></span> I need a room</label></div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-12">
+                        <button class="btn btn-block btn-lg btn-facebook" ng-click="onGetStarted()">
+                            Get Started
+                        </button>
+                    </div>
                 </div>
             </form>
 

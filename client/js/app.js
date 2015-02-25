@@ -57,6 +57,10 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ui.router', 'ui.bootstrap'
                     }
                 }
             })
+            .state('info', {
+                url: '/info',
+                templateUrl: '/partials/info.html'
+            })
             .state('profile', {
                 url: '/profile',
                 templateUrl: '/partials/profile.html',

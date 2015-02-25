@@ -19,4 +19,9 @@ angular.module('MyApp')
 
                 });
         };
+
+        $scope.onGetStarted = function () {
+            /*$window.location.href = 'https://chayajadhav.typeform.com/to/bWXwQT';*/
+            $state.transitionTo('info');
+        };
     });
